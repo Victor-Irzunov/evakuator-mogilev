@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+:root{
+	--colTab: #fff;
+	--hov: red;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app{
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 200vh;
+	background-color: #fff;
+ }
+ .container{
+	margin: 0 auto;
+ }
+
+ .progress-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: #f8862e;
+	transform-origin: 0%;
+	z-index: 1000;
+ }
+
+ .fon{
+	background-image: url('./images/main/fon.webp');
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fon:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	background: #000;
+	opacity: .5;
+	z-index: -1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* .ant-table-tbody {
+	background-color: var(--colTab);
+ }
+ .ant-table-thead .ant-table-cell{
+	background-color: var(--colTab) !important;
+ }
+
+ .ant-table-row-expand-icon{
+	background: var(--colTab) !important;
+ }
+
+ .ant-table-expanded-row .ant-table-cell{
+	background-color: var(--colTab);
+ }
+
+ 
+ .ant-table-tbody>tr.ant-table-row:hover>td, .ant-table-tbody>tr>td.ant-table-cell-row-hover{
+	background: var(--hov) !important;
+ }
+ tr.ant-table-expanded-row:hover>td {
+	background: var(--hov) !important;
 }
 
-.App-link {
-  color: #61dafb;
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow svg{
+	color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.ant-table-title{
+	background: #fff;
+} */
+/* .img-black{
+z-index: -1;
+} */
+.img-black:after{
+content:'';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 98.9%;
+background: #000;
+opacity: .5;
+z-index: 0;
 }
