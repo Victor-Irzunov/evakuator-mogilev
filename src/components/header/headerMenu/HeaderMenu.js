@@ -107,7 +107,7 @@ export const HeaderMenu = ({ isVisible }) => {
 
 						<div className='fixed top-2 right-2 p-3 border z-50'>
 							<MenuOutlined
-								className='text-4xl text-[#f8862e]'
+								className='text-4xl text-orange-500'
 								onClick={() => showDrawer('right', 'Меню', 'menu')}
 							/>
 						</div>

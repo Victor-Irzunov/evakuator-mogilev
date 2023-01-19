@@ -19,7 +19,8 @@ object {
 }
 
 button, [type='button'], [type='reset'], [type='submit']{
-  background-color: #f8862e;
+  background-color: #f97315;
+  color: #fff;
 }
 
 ol, ul, dl {

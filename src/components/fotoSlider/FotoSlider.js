@@ -8,7 +8,7 @@ export const FotoSlider = () => {
 			<div className='container'>
 				<div className='text-center'>
 					<h2 className='text-4xl text-white uppercase'>
-						 <span className='text-[#f8862e]'>Наша</span> фотогалерея
+						 <span className='text-orange-500'>Наша</span> фотогалерея
 					</h2>
 					<LineOutlined style={{ color: '#f8862e', fontSize: '3rem' }} />
 				</div>

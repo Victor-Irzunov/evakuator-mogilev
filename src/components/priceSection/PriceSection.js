@@ -5,7 +5,7 @@ export const PriceSection = () => {
 	return (
 		<section className='py-12 w-full z-10 bg-white'>
 			<div className='container'>
-				<div className='text-center text-4xl text-[#f8862e]'>
+				<div className='text-center text-4xl text-orange-500'>
 					<h2 className='uppercase'>Лучшая <span className='text-black'>цена</span></h2>
 					<LineOutlined style={{ color:'#f8862e', fontSize: '3rem' }} />
 				</div>

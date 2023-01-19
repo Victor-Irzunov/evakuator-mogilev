@@ -81,13 +81,13 @@ export const HeaderInfo = ({ setIsVisible }) => {
 							<span className='uppercase ml-0.5 font-semibold'>7</span>
 						</div>
 						<div className='mt-2 mb-2'>
-							<div className='text-lg text-[#f8862e]'>
+							<div className='text-lg text-orange-500'>
 								<div className='flex items-end pl-7'>
 									<a href='tel:80299441276' className='text-2xl'>+375 29 944-12-76 </a>
 									<span className='ml-1 text-[14px] font-extralight text-[#fb923c] uppercase'>a1</span>
 								</div>
 							</div>
-							<div className='text-lg text-[#f8862e]'>
+							<div className='text-lg text-orange-500'>
 								<div className='flex items-end pl-7'>
 									<a href='tel:80292780878' className='text-2xl'>+375 29 278-08-78</a>
 									<span className='ml-1 font-extralight text-[15px] text-[#fb923c]'>мтс</span>

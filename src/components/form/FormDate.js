@@ -102,13 +102,12 @@ export const FormDate = () => {
 					placeholder="29 123-45-67"
 					mask="+3\7\5 99 999 99 99"
 					maskChar={'-'}
-					className='ant-input ant-input-lg ant-input-status-success css-dev-only-do-not-override-zn6dwe'
+					className='border py-1 px-3 rounded-md'
 					beforeMaskedValueChange={beforeMaskedValueChange}
 					value={tel}
 					onChange={(e) => setTel(e.target.value)}
 				/>
 
-				<Input type='hidden' />
 			</Form.Item>
 
 
@@ -124,7 +123,7 @@ export const FormDate = () => {
 			</Form.Item>
 			</Form>
 
-			<p>15% скидка по предварительной записи.</p>
+			<p>20% скидка по предварительной записи.</p>
 			
 			</>
 	)
