@@ -66,7 +66,7 @@ export const HeaderInfo = ({ setIsVisible }) => {
 							<div className='flex flex-col items-center'>
 								<p className='text-sm text-[#f8862e] mb-1'>Напишите нам</p>
 								<div>
-									<a fref='https://t.me/'><Image src={telegram} style={{ width: '30px' }} /></a>
+									<a fref='https://t.me/@sergey_avtohelp'><Image src={telegram} style={{ width: '30px' }} /></a>
 									<a fref='http://wa.me/375292780878?text=нужен%20эвакуатор%20'><Image src={whatsapp} style={{ width: '30px', marginLeft: '8px' }} /></a>
 									<a fref='viber://add?number=375292780878'><Image src={viber} style={{ width: '30px', marginLeft: '8px' }} /></a>
 								</div>
@@ -99,9 +99,9 @@ export const HeaderInfo = ({ setIsVisible }) => {
 						<div className='flex flex-col items-center mb-2'>
 							<p className='text-sm text-[#f8862e] mb-2 uppercase' onClick={() => showDrawer('top', 'Заказать звонок')}><ShakeOutlined /> Заказать звонок</p>
 							<div>
-							<a fref='https://t.me/'><Image src={telegram} style={{ width: '30px' }} /></a>
-							<a fref='http://wa.me/375292780878?text=нужен%20эвакуатор%20'><Image src={whatsapp} style={{ width: '30px', marginLeft: '1.5em' }} /></a>
-							<a fref='viber://add?number=375292780878'><Image src={viber} style={{ width: '30px', marginLeft: '1.5em' }} /></a>
+								<a fref='https://t.me/@sergey_avtohelp'><Image src={telegram} style={{ width: '30px' }} /></a>
+								<a fref='http://wa.me/375292780878?text=нужен%20эвакуатор%20'><Image src={whatsapp} style={{ width: '30px', marginLeft: '1.5em' }} /></a>
+								<a fref='viber://add?number=375292780878'><Image src={viber} style={{ width: '30px', marginLeft: '1.5em' }} /></a>
 							</div>
 						</div>
 						<Button type='primary'>
@@ -109,7 +109,7 @@ export const HeaderInfo = ({ setIsVisible }) => {
 								<PhoneOutlined className='rotate-90 animate-pulse' /><span className='uppercase'> Срочная эвакуация</span>
 							</a>
 						</Button>
-						
+
 						<Affix offsetTop={30} onChange={() => setIsVisible(i => !i)}><div></div></Affix>
 					</div>
 			}
