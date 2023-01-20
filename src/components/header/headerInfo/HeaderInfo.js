@@ -109,9 +109,7 @@ export const HeaderInfo = ({ setIsVisible }) => {
 								<PhoneOutlined className='rotate-90 animate-pulse' /><span className='uppercase'> Срочная эвакуация</span>
 							</a>
 						</Button>
-						{/* <Button type='primary' className='mt-2 shadow-xl' onClick={() => showDrawer('top', 'Заказать звонок')}>
-							<ShakeOutlined /> Заказать звонок
-						</Button> */}
+						
 						<Affix offsetTop={30} onChange={() => setIsVisible(i => !i)}><div></div></Affix>
 					</div>
 			}

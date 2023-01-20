@@ -72,8 +72,8 @@ export const MainPage = () => {
               в Могилёве
             </h1>
 
-            <p className='text-white text-xl'>от 40 руб</p>
-            <p className='text-sm uppercase text-[#f8862e]'>эвакуатор приедет в течении 15 мин</p>
+            <p className='text-white text-xl md:text-4xl'>от 40 руб</p>
+            <p className='text-sm uppercase text-[#f8862e] md:text-xl'>эвакуатор приедет в течении 15 мин</p>
 
             <div className='mt-2 text-center'>
               <p className='text-white text-base uppercase mb-1'>Погрузка любой сложности </p>
@@ -83,7 +83,7 @@ export const MainPage = () => {
 
           <div className='text-center'>
             <p
-              className='uppercase text-2xl text-white'
+              className='uppercase text-2xl text-white cursor-pointer'
               onClick={() => showModal('Задать вопрос')}
             >
               Задать вопрос
