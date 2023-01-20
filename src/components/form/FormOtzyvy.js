@@ -1,14 +1,28 @@
-import { Button, Form, Input, Checkbox, Rate, message, InputNumber } from 'antd'
+import { Button, Form, Input, Checkbox, Rate, message } from 'antd'
 
 import React, { useState } from 'react'
+import { sendOrderTelegram } from '../../http/telegramAPI'
 
-export const FormOtzyvy = ({setAdd}) => {
+const { TextArea } = Input
+
+export const FormOtzyvy = ({ setAdd }) => {
 	const [isCheck, setIsCheck] = useState(false)
 
 	const onFinish = (values) => {
 		console.log('Success:', values)
+		let messageForm = `<b>Отзыв с сайта</b>\n`
+		messageForm += `<b> </b>\n`
+		messageForm += `<b>Клиент по имени ${values.name} оставил отзыв </b>\n`
+		messageForm += `<b>Отзыв: ${values.message} </b>\n`
+		messageForm += `<b>Оценка: ${values.rate} звёздочек</b>\n`
+		messageForm += `<b>- - - - - - - - - - - - - - -</b>\n`
+		messageForm += `<b>Телефон:</b> ${values.tel}\n`
+		messageForm += `<b>Авто:</b> ${values.avto}\n`
 
-		message.success('Ваш отзыв принят')
+		sendOrderTelegram(messageForm)
+			.then(data => {
+				if (data.ok) message.success('Ваш отзыв принят')
+			})
 	}
 	const onFinishFailed = (errorInfo) => {
 		console.log('Failed:', errorInfo)
@@ -49,7 +63,7 @@ export const FormOtzyvy = ({setAdd}) => {
 
 			<Form.Item
 				label="Марка авто"
-				name="name"
+				name="avto"
 				rules={[
 					{
 						required: true,
@@ -63,6 +77,7 @@ export const FormOtzyvy = ({setAdd}) => {
 			<Form.Item
 				label="Телефон"
 				name="tel"
+				tooltip='Публиковаться не будет.'
 				rules={[
 					{
 						required: true,
@@ -71,6 +86,25 @@ export const FormOtzyvy = ({setAdd}) => {
 				]}
 			>
 				<Input />
+			</Form.Item>
+
+			<Form.Item
+				label="Отзыв"
+				name="message"
+				tooltip="Опишите почему вызывали, как о нас узнали, как проходил процесс, впечатления о проделаной работе."
+				rules={[
+					{
+						required: true,
+						message: 'Пожалуйста напишите отзыв!',
+					},
+				]}
+			>
+				<TextArea
+					placeholder=""
+					autoSize={{
+						minRows: 3,
+					}}
+				/>
 			</Form.Item>
 
 
@@ -112,7 +146,7 @@ export const FormOtzyvy = ({setAdd}) => {
 				</Button>
 			</Form.Item>
 			<p className='text-[12px]'>За оставленый отзыв мы дарим клиенту 15% скидку на наши услуги, пожизненно!</p>
-			<p className='underline' onClick={()=>setAdd(false)}>скрыть форму</p>
+			<p className='underline' onClick={() => setAdd(false)}>скрыть форму</p>
 		</Form>
 	)
 }

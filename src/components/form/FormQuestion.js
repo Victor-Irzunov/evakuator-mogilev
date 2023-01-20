@@ -1,13 +1,25 @@
 import React, { useState } from 'react'
-import { Form, Button, Input } from 'antd'
+import { Form, Button, Input, message } from 'antd'
 import InputMask from 'react-input-mask'
+import { sendOrderTelegram } from '../../http/telegramAPI'
 
 const { TextArea } = Input
 
 export const FormQuestion = () => {
 	const [tel, setTel] = useState('')
 	const onFinish = (values) => {
-		console.log('Success:', values);
+		let messageForm = `<b>Вопрос с сайта</b>\n`
+		messageForm += `<b> </b>\n`
+		messageForm += `<b>Клиент по имени ${values.name} задал вопрос </b>\n`
+		messageForm += `<b>Вопрос: ${values.message} </b>\n`
+		messageForm += `<b>- - - - - - - - - - - - - - -</b>\n`
+		messageForm += `<b>Телефон:</b> ${values.tel}\n`
+
+		sendOrderTelegram(messageForm)
+			.then(data => {
+				if (data.ok) message.success('Ваш вопрос принят')
+			})
+
 	};
 	const onFinishFailed = (errorInfo) => {
 		console.log('Failed:', errorInfo);
@@ -56,7 +68,7 @@ export const FormQuestion = () => {
 				<Form.Item
 					label="Телефон"
 					name="tel"
-					tooltip="Мы Вам перезвоним с ответом"
+					tooltip="код оператора и номер"
 					rules={[
 						{
 							required: true,
@@ -68,7 +80,7 @@ export const FormQuestion = () => {
 						placeholder="29 123-45-67"
 						mask="+3\7\5 99 999 99 99"
 						maskChar={'-'}
-						className='border py-1 px-3 rounded-md'
+						className='border py-1 px-3 rounded-md w-full'
 						beforeMaskedValueChange={beforeMaskedValueChange}
 						value={tel}
 						onChange={(e) => setTel(e.target.value)}

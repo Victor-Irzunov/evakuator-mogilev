@@ -18,7 +18,7 @@ export const Сonsultation = () => {
 				<div className='mt-4'>
 					<Image src={img} width='80%' />
 				</div>
-				<p className='mt-3'>эвакуатор к Вашим услугам</p>
+				<p className='mt-3'>эвакуатор к вашим услугам</p>
 			</div>
 		</section>
 	)

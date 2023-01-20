@@ -4,7 +4,7 @@ import { Button, notification } from 'antd'
 import { Сonsultation } from '../../components/consultationSection/Сonsultation'
 import { ServiceSection } from '../../components/serviceSection/ServiceSection'
 import { PriceSection } from '../../components/priceSection/PriceSection'
-import { FotoSlider } from '../../components/fotoSlider/FotoSlider'
+import { FotoSlider } from '../../components/fotoSliderSection/FotoSlider'
 import VoprosOtvet from '../../components/voprosOtvet/VoprosOtvet'
 import { OtzyvySection2 } from '../../components/otzyvySection/OtzyvySection2'
 import { FooterSection } from '../../components/footerSection/FooterSection'
@@ -72,11 +72,12 @@ export const MainPage = () => {
               в Могилёве
             </h1>
 
-            <p className='text-white text-sm uppercase'>от 40 руб | приедем в течении 15 мин</p>
+            <p className='text-white text-xl'>от 40 руб</p>
+            <p className='text-sm uppercase text-[#f8862e]'>эвакуатор приедет в течении 15 мин</p>
 
-            <div className='mt-16 text-center'>
-              <p className='text-[#f8862e] text-base uppercase'>Погрузка любой сложности </p>
-              <p className='text-[#f8862e] text-base uppercase'>опыт 12 лет</p>
+            <div className='mt-2 text-center'>
+              <p className='text-white text-base uppercase mb-1'>Погрузка любой сложности </p>
+              <p className='text-white text-base uppercase'>опыт 12 лет</p>
             </div>
           </div>
 

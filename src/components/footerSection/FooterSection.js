@@ -1,7 +1,33 @@
 import { Button } from 'antd'
-import React from 'react'
+import React,{useState} from 'react'
+import { DrawerComp } from '../drawer/DrawerComp'
 
 export const FooterSection = () => {
+	const [open, setOpen] = useState(false)
+
+	const [placement, setPlacement] = useState('')
+	const [title, setTitle] = useState('')
+	const [isActiveForm, setIsActiveForm] = useState({
+		tel: false,
+		date: false,
+		menu: false,
+	})
+
+
+	const showDrawer = (position, title, str) => {
+		setOpen(true)
+		setPlacement(position)
+		setTitle(title)
+		switch (str) {
+			case 'tel': setIsActiveForm(prev => ({ ...prev, tel: true, date: false, menu: false }))
+				break
+			case 'date': setIsActiveForm(prev => ({ ...prev, tel: false, date: true, menu: false }))
+				break
+		}
+	}
+
+
+
 	return (
 		<section className='pt-12 pb-1 w-full z-10 bg-black/30 relative'>
 			<div className='container text-center'>
@@ -27,7 +53,11 @@ export const FooterSection = () => {
 					<p className='text-xs uppercase'>
 						запишитесь заранее на определёное время и получите скидку<span className='text-orange-500 text-sm'> 20%</span> на эвакуцию Вашего автомобиля.
 					</p>
-					<Button type='primary'>
+					<Button
+						type='primary'
+						className='uppercase'
+						onClick={() => showDrawer('right', 'Заказать на дату', 'date')}
+					>
 						Записаться
 					</Button>
 				</div>
@@ -62,6 +92,7 @@ export const FooterSection = () => {
 					</p>
 				</div>
 			</div>
+			<DrawerComp open={open} placement={placement} title={title} setOpen={setOpen} isActiveForm={isActiveForm} />
 		</section>
 	)
 }

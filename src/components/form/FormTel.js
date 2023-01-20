@@ -1,11 +1,21 @@
-import React, {useState} from 'react'
-import { Form, Button, Input } from 'antd'
+import React, { useState } from 'react'
+import { Form, Button, Input, message } from 'antd'
 import InputMask from 'react-input-mask'
+import { sendOrderTelegram } from '../../http/telegramAPI'
 
-export const FormTel = ({btn='Жду звонка'}) => {
+export const FormTel = ({ btn = 'Жду звонка' }) => {
 	const [tel, setTel] = useState('')
 	const onFinish = (values) => {
 		console.log('Success:', values);
+
+		let messageForm = `<b>Клиент с сайта просит перезвонить</b>\n`
+		messageForm += `<b> </b>\n`
+		messageForm += `<b>Телефон:</b> ${values.tel}\n`
+
+		sendOrderTelegram(messageForm)
+			.then(data => {
+				if (data.ok) message.success('Мы получили сообщение и скоро Вам перезвоним')
+			})
 	};
 	const onFinishFailed = (errorInfo) => {
 		console.log('Failed:', errorInfo);
@@ -28,53 +38,58 @@ export const FormTel = ({btn='Жду звонка'}) => {
 		}
 	}
 	return (
-		<Form
-			name="basic"
-			labelCol={{
-				span: 4,
-			}}
-			wrapperCol={{
-				span: 20,
-			}}
-			onFinish={onFinish}
-			onFinishFailed={onFinishFailed}
-			autoComplete="off"
-		>
-			<Form.Item
-				label="Телефон"
-				name="tel"
-				tooltip="Вам перезвонит первый освободившийся оператор"
-				rules={[
-					{
-						required: true,
-						message: 'Пожалуйста введите номер!',
-					},
-				]}
-			>
-				<InputMask
-					placeholder="29 123-45-67"
-					mask="+3\7\5 99 999 99 99"
-					maskChar={'-'}
-					className='border py-1 px-3 rounded-md'
-					beforeMaskedValueChange={beforeMaskedValueChange}
-					value={tel}
-					onChange={(e) => setTel(e.target.value)}
-				/>
-
-				<Input type='hidden'/>
-			</Form.Item>
-
-
-			<Form.Item
-				wrapperCol={{
-					offset: 8,
-					span: 16,
+		<>
+			<Form
+				name="basic"
+				labelCol={{
+					span: 4,
 				}}
+				wrapperCol={{
+					span: 20,
+				}}
+				onFinish={onFinish}
+				onFinishFailed={onFinishFailed}
+				autoComplete="off"
 			>
-				<Button type="primary" htmlType="submit">
-					{btn}
-				</Button>
-			</Form.Item>
-		</Form>
+				<Form.Item
+					label="Телефон"
+					name="tel"
+					tooltip="код оператора и номер"
+					rules={[
+						{
+							required: true,
+							message: 'Пожалуйста введите номер!',
+						},
+					]}
+				>
+					<InputMask
+						placeholder="29 123-45-67"
+						mask="+3\7\5 99 999 99 99"
+						maskChar={'-'}
+						className='border py-1 px-3 rounded-md w-full'
+						beforeMaskedValueChange={beforeMaskedValueChange}
+						value={tel}
+						onChange={(e) => setTel(e.target.value)}
+					/>
+
+				</Form.Item>
+
+
+				<Form.Item
+					wrapperCol={{
+						offset: 8,
+						span: 16,
+					}}
+				>
+					<Button type="primary" htmlType="submit">
+						{btn}
+					</Button>
+				</Form.Item>
+
+			</Form>
+			<p className='mt-12 text-gray-500'>
+				Оправте нам свой номер телефона и Вам перезвонит первый освободившийся оператор.
+			</p>
+		</>
 	)
 }

@@ -44,7 +44,24 @@ export const ServiceSection = () => {
 						from-black/80 to-black/0
 						 text-white
 						uppercase font-bold text-lg'
-						>Эвакуатор с места ДТП</p>
+						>
+							Эвакуатор с места ДТП
+						</p>
+
+						<div className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20'>
+							<ul className='text-xs text-white/90 text-center'>
+								<li>
+									приедим оперативно
+								</li>
+								<li>
+									погрузим в любом состоянии
+								</li>
+								<li>
+
+								</li>
+							</ul>
+						</div>
+
 						<Button
 							type='primary'
 							size='large'
@@ -65,6 +82,25 @@ export const ServiceSection = () => {
 						from-black/80 to-black/0 text-white
 						uppercase font-bold text-lg'
 						>Достанем машину из кювета</p>
+
+						<div className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20'>
+							<ul className='text-xs text-white/90 text-center'>
+								<li>
+									машина лежит на днище
+								</li>
+								<li>
+									машина на боку
+								</li>
+								<li>
+									машина в грязи
+								</li>
+								<li>
+									машина в яме/канаве
+								</li>
+							</ul>
+						</div>
+
+
 						<Button
 							type='primary'
 							size='large'
@@ -85,6 +121,30 @@ export const ServiceSection = () => {
 						from-black/80 to-black/0 text-white
 						uppercase font-bold text-lg'
 						>Перевезём машину на СТО</p>
+
+						<div className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20'>
+							<ul className='text-xs text-white/90 text-center'>
+								<li>
+									поломка двигателя
+								</li>
+								<li>
+									поломка коробки передач
+								</li>
+								<li>
+									машина полностью заблокирована
+								</li>
+								<li>
+									поломка подвески
+								</li>
+								<li>
+									проблемы с электроникой
+								</li>
+								<li>
+									проблемы с сигнализацией
+								</li>
+							</ul>
+						</div>
+
 						<Button
 							type='primary'
 							size='large'
@@ -105,6 +165,26 @@ export const ServiceSection = () => {
 						from-black/80 to-black/0 text-white
 						uppercase font-bold text-lg'
 						>Перевозка машины по РБ и РФ</p>
+
+						<div className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20'>
+							<ul className='text-xs text-white/90 text-center'>
+								<li>
+									поломка машины в Беларуси
+								</li>
+								<li>
+									поломка машины в России
+								</li>
+								<li>
+									покупка машины в Беларуси
+								</li>
+								<li>
+									покупка машины в России
+								</li>
+							</ul>
+						</div>
+
+
+
 						<Button
 							type='primary'
 							size='large'
@@ -115,7 +195,7 @@ export const ServiceSection = () => {
 						</Button>
 					</div>
 
-					<div className='w-full relative  img-black border'>
+					<div className='w-full relative img-black border'>
 						<Image src={img5} className='' />
 						<p className='absolute top-0 
 						left-0 right-0 
@@ -125,6 +205,30 @@ export const ServiceSection = () => {
 						from-black/80 to-black/0 text-white
 						uppercase font-bold text-lg'
 						>Тех. помощь на дороге</p>
+
+						<div className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20'>
+							<ul className='text-xs text-white/90 text-center'>
+								<li>
+									требуется прикурить автомобиль
+								</li>
+								<li>
+									сломался замок в машине
+								</li>
+								<li>
+									нужно подвезти топливо
+								</li>
+								<li>
+									спустило колесо, нет запаски
+								</li>
+								<li>
+									машина полностью заблокирована
+								</li>
+								<li>
+									вышла из строя сигнализация
+								</li>
+							</ul>
+						</div>
+
 						<Button
 							type='primary'
 							size='large'
