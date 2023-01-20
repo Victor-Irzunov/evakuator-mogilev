@@ -1,5 +1,5 @@
 import { Button } from 'antd'
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { DrawerComp } from '../drawer/DrawerComp'
 
 export const FooterSection = () => {
@@ -29,7 +29,7 @@ export const FooterSection = () => {
 
 
 	return (
-		<section className='pt-12 pb-1 w-full z-10 bg-black/30 relative'>
+		<section className='pt-12 pb-1 w-full z-10 bg-black/30 relative' id='contact'>
 			<div className='container text-center'>
 				<div className=''>
 					<h3 className='text-xl text-white uppercase tracking-wider'>

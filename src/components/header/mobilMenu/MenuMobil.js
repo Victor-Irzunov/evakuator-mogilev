@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Button, Image } from 'antd'
 import { motion } from "framer-motion"
+import { Link as LinkScroll } from 'react-scroll'
 import { PhoneOutlined, ShakeOutlined, CalendarOutlined } from '@ant-design/icons'
 import { DrawerComp } from '../../drawer/DrawerComp'
 import image from '../../../images/menu/img.webp'
 
-export const MenuMobil = () => {
+export const MenuMobil = ({ onClose }) => {
 	const [open, setOpen] = useState(false)
 
 	const [placement, setPlacement] = useState('')
@@ -15,7 +16,6 @@ export const MenuMobil = () => {
 		date: false,
 		menu: false,
 	})
-
 
 	const showDrawer = (position, title, str) => {
 		setOpen(true)
@@ -34,11 +34,83 @@ export const MenuMobil = () => {
 		<div className=''>
 			<nav className='text-center'>
 				<ul className='h-[50vh] flex flex-col justify-between items-center text-lg text-[#f8862e] cursor-pointer'>
-					<li>Главная</li>
-					<li>Услуги</li>
-					<li>Цены</li>
-					<li>Галерея</li>
-					<li>Контакты</li>
+					<li>
+						<LinkScroll to='main'
+							smooth={true}
+							offset={-100}
+							duration={800}
+							className="cursor-pointer"
+							onClick={onClose}
+						>
+							Главная
+						</LinkScroll>
+					</li>
+					<li>
+						<LinkScroll to='service'
+							smooth={true}
+							offset={-100}
+							duration={800}
+							className="cursor-pointer"
+							onClick={onClose}
+						>
+							Услуги
+						</LinkScroll>
+					</li>
+					<li>
+						<LinkScroll to='price'
+							smooth={true}
+							offset={-100}
+							duration={800}
+							className="cursor-pointer"
+							onClick={onClose}
+						>
+							Цены
+						</LinkScroll>
+					</li>
+					<li>
+						<LinkScroll to='galereya'
+							smooth={true}
+							offset={-100}
+							duration={800}
+							className="cursor-pointer"
+							onClick={onClose}
+						>
+							Галерея
+						</LinkScroll>
+					</li>
+					<li>
+						<LinkScroll to='vopros'
+							smooth={true}
+							offset={-100}
+							duration={800}
+							className="cursor-pointer"
+							onClick={onClose}
+						>
+							Вопросы
+						</LinkScroll>
+					</li>
+					<li>
+						<LinkScroll to='otzyvy'
+							smooth={true}
+							offset={-100}
+							duration={800}
+							className="cursor-pointer"
+							onClick={onClose}
+						>
+							Отзывы
+						</LinkScroll>
+					</li>
+					<li>
+						<LinkScroll to='contact'
+							smooth={true}
+							offset={-100}
+							duration={800}
+							className="cursor-pointer"
+							onClick={onClose}
+						>
+							Контакты
+						</LinkScroll>
+					</li>
 					<li className=''>
 						<Button type='primary'>
 							<a href='tel:80299441276'>

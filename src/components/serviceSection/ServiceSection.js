@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import img1 from '../../images/service/1.webp'
-import img2 from '../../images/portfolio/7.jpg'
-import img3 from '../../images/portfolio/5.jpg'
-import img4 from '../../images/portfolio/10.jpg'
-import img5 from '../../images/service/13.jpg'
+import img1 from '../../images/service/14.webp'
+import img2 from '../../images/portfolio/7.webp'
+import img3 from '../../images/portfolio/5.webp'
+import img4 from '../../images/portfolio/10.webp'
+import img5 from '../../images/service/13.webp'
 import { Button, Image, Modal } from 'antd'
 import { LineOutlined } from '@ant-design/icons'
 import { ModalComp } from '../modal/ModalComp'
@@ -23,7 +23,7 @@ export const ServiceSection = () => {
 	};
 
 	return (
-		<section className='py-12 w-full z-10'>
+		<section className='py-12 w-full z-10' id='service'>
 			<div className='container'>
 				<div className='text-center'>
 					<h2 className='text-white text-4xl text-center uppercase'>
@@ -33,8 +33,10 @@ export const ServiceSection = () => {
 				</div>
 
 
-				<div className='mt-12'>
-					<div className='w-full relative mb-6 img-black border' >
+				<div className='mt-12 sd:flex sd:justify-evenly sd:items-center sd:flex-wrap'>
+
+
+					<div className='w-full sd:w-5/12 relative mb-6 img-black hover:border' >
 						<Image src={img1} className='' />
 						<p className='absolute top-0
 						left-0 right-0 
@@ -47,7 +49,6 @@ export const ServiceSection = () => {
 						>
 							Эвакуатор с места ДТП
 						</p>
-
 						<div className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20'>
 							<ul className='text-xs text-white/90 text-center'>
 								<li>
@@ -61,7 +62,6 @@ export const ServiceSection = () => {
 								</li>
 							</ul>
 						</div>
-
 						<Button
 							type='primary'
 							size='large'
@@ -72,8 +72,8 @@ export const ServiceSection = () => {
 						</Button>
 					</div>
 
-					<div className='w-full relative mb-6 img-black border'>
-						<Image src={img2} className='' />
+					<div className='w-full sd:w-5/12 relative mb-6 img-black hover:border'>
+						<Image src={img2} />
 						<p className='absolute top-0 
 						left-0 right-0 
 						py-3 pl-2 z-10
@@ -111,7 +111,7 @@ export const ServiceSection = () => {
 						</Button>
 					</div>
 
-					<div className='w-full relative mb-6 img-black border'>
+					<div className='w-full sd:w-5/12 relative mb-6 img-black hover:border'>
 						<Image src={img3} className='' />
 						<p className='absolute top-0
 						left-0 right-0 
@@ -155,7 +155,7 @@ export const ServiceSection = () => {
 						</Button>
 					</div>
 
-					<div className='w-full relative mb-6 img-black border'>
+					<div className='w-full sd:w-5/12 relative mb-6 img-black hover:border'>
 						<Image src={img4} className='' />
 						<p className='absolute top-0
 						left-0 right-0 
@@ -195,7 +195,7 @@ export const ServiceSection = () => {
 						</Button>
 					</div>
 
-					<div className='w-full relative img-black border'>
+					<div className='w-full sd:w-5/12 relative img-black hover:border'>
 						<Image src={img5} className='' />
 						<p className='absolute top-0 
 						left-0 right-0 

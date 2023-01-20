@@ -6,7 +6,7 @@ export const Header = () => {
 	const [isVisible, setIsVisible] = useState(false)
 
 	return (
-		<header className='mb-4 pt-2'>
+		<header className='mb-4 z-50'>
 			<HeaderInfo setIsVisible={setIsVisible} />
 			<HeaderMenu isVisible={isVisible} />
 		</header>

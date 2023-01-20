@@ -42,10 +42,10 @@ export const FormTel = ({ btn = 'Жду звонка' }) => {
 			<Form
 				name="basic"
 				labelCol={{
-					span: 4,
+					span: 24,
 				}}
 				wrapperCol={{
-					span: 20,
+					span: 24,
 				}}
 				onFinish={onFinish}
 				onFinishFailed={onFinishFailed}

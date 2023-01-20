@@ -4,7 +4,7 @@ import { LineOutlined } from '@ant-design/icons'
 
 export const FotoSlider = () => {
 	return (
-		<section className='py-12 w-full z-10'>
+		<section className='py-12 w-full z-10' id='galereya'>
 			<div className='container'>
 				<div className='text-center'>
 					<h2 className='text-4xl text-white uppercase'>
@@ -13,7 +13,7 @@ export const FotoSlider = () => {
 					<LineOutlined style={{ color: '#f8862e', fontSize: '3rem' }} />
 				</div>
 
-				<div className=''>
+				<div className='sm:w-3/4 m-auto'>
 					<SliderComp />
 				</div>
 			</div>

@@ -24,7 +24,7 @@ export const DrawerComp = ({ open, placement, setOpen, isActiveForm, title }) =>
 				isActiveForm.date && <FormDate />
 			}
 			{
-				isActiveForm.menu && <MenuMobil />
+				isActiveForm.menu && <MenuMobil onClose={onClose} />
 			}
 		</Drawer>
 	)

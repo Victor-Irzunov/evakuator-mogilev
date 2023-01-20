@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { useScreens } from '../../../Constants/constants'
 import { Affix, Button, Image } from 'antd'
-import { motion,AnimatePresence } from "framer-motion"
-import {  ShakeOutlined, CalendarOutlined, MenuOutlined } from '@ant-design/icons'
+import { motion, AnimatePresence } from "framer-motion"
+import { ShakeOutlined, CalendarOutlined, MenuOutlined } from '@ant-design/icons'
 import { DrawerComp } from '../../drawer/DrawerComp'
 import logo from '../../../images/logo/logo1.png'
+import { Link as LinkScroll } from 'react-scroll'
 
 export const HeaderMenu = ({ isVisible }) => {
 	const [isAffix, setIsAffix] = useState(false)
@@ -36,29 +37,85 @@ export const HeaderMenu = ({ isVisible }) => {
 	return (
 		<div className=''>
 			{
-				screens.lg ?
+				screens.sm ?
 					<Affix
 						offsetTop={0}
 						className='z-50'
-						onChange={(affixed) => setIsAffix(affixed)}
+					// onChange={(affixed) => setIsAffix(affixed)}
 					>
 						<div
 							className={isAffix ? 'relative pt-2 pb-2 bg-[#313846]' : `relative pt-5 pb-5 bg-[#313846]`}
 						>
 							<div className='container'>
 								<nav>
-									<ul className='flex justify-between items-center text-lg text-[#f8862e] cursor-pointer'>
-										<li>Главная</li>
-										<li>Услуги</li>
-										<li>Цены</li>
-										<li>Галерея</li>
-										<li>Контакты</li>
+									<ul className='flex justify-between items-center text-lg text-[#f8862e] cursor-pointer z-50'>
+										<li><LinkScroll to='main'
+											smooth={true}
+											offset={-100}
+											duration={800}
+											className="cursor-pointer"
+										>
+											Главная
+										</LinkScroll></li>
+										<li>
+											<LinkScroll to='service'
+												smooth={true}
+												offset={-100}
+												duration={800}
+												className="cursor-pointer"
+											>
+												Услуги
+											</LinkScroll>
+										</li>
+										<li>
+											<LinkScroll to='price'
+												smooth={true}
+												offset={-100}
+												duration={800}
+												className="cursor-pointer"
+											>
+												Цены
+											</LinkScroll>
+										</li>
+										<li>
+											<LinkScroll to='galereya'
+												smooth={true}
+												offset={-100}
+												duration={800}
+												className="cursor-pointer"
+											>
+												Галерея
+											</LinkScroll>
+										</li>
+										<li><LinkScroll to='vopros'
+											smooth={true}
+											offset={-100}
+											duration={800}
+											className="cursor-pointer"
+										>
+											Вопросы
+										</LinkScroll></li>
+										<li>
+											<LinkScroll to='otzyvy'
+												smooth={true}
+												offset={-100}
+												duration={800}
+												className="cursor-pointer"
+											>
+												Отзывы
+											</LinkScroll>
+										</li>
+										<li>
+											<LinkScroll to='contact'
+												smooth={true}
+												offset={-100}
+												duration={800}
+												className="cursor-pointer"
+											>
+												Контакты
+											</LinkScroll>
+										</li>
 										<li className='ml-48'>
-											{/* <Button type='primary'>
-												<a href='tel:80299441276'>
-													<PhoneOutlined className='rotate-90 animate-pulse' /><span className='animate-pulse'> Позвонить сейчас</span>
-												</a>
-											</Button> */}
 										</li>
 										<li>
 											<Button type='primary' onClick={() => showDrawer('top', 'Заказать звонок', 'tel')}>

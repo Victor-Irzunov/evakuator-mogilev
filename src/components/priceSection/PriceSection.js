@@ -3,7 +3,7 @@ import { LineOutlined } from '@ant-design/icons'
 
 export const PriceSection = () => {
 	return (
-		<section className='py-12 w-full z-10 bg-white'>
+		<section className='py-12 w-full z-10 bg-white' id='price'>
 			<div className='container'>
 				<div className='text-center text-4xl text-orange-500'>
 					<h2 className='uppercase'>Лучшая <span className='text-black'>цена</span></h2>

@@ -16,7 +16,7 @@ export const Сonsultation = () => {
 					<span className='ml-1 font-extralight text-[14px] mb-1.5'>мтс</span>
 				</div>
 				<div className='mt-4'>
-					<Image src={img} width='80%' />
+					<Image src={img} className='w-8/12' />
 				</div>
 				<p className='mt-3'>эвакуатор к вашим услугам</p>
 			</div>

@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { Button, Popover, Rate, Avatar, Image } from 'antd'
 import { ExclamationCircleOutlined, LineOutlined, UserOutlined } from '@ant-design/icons'
 import { FormOtzyvy } from '../form/FormOtzyvy'
-import img1 from '../../images/portfolio/12.jpg'
-import img2 from '../../images/portfolio/6.jpg'
-import img3 from '../../images/portfolio/7.jpg'
-import img4 from '../../images/portfolio/10.jpg'
-import img5 from '../../images/portfolio/2.jpg'
+import img1 from '../../images/portfolio/12.webp'
+import img2 from '../../images/portfolio/6.webp'
+import img3 from '../../images/portfolio/7.webp'
+import img4 from '../../images/portfolio/10.webp'
+import img5 from '../../images/portfolio/2.webp'
 
 const content = (
 	<div>
@@ -20,7 +20,7 @@ export const OtzyvySection2 = () => {
 
 
 	return (
-		<section className='py-12 w-full z-10 bg-white min-h-[60vh]'>
+		<section className='py-12 w-full z-10 bg-white min-h-[60vh]' id='otzyvy'>
 			<div className='container'>
 				<div className='text-center mb-12'>
 					<h2 className='text-4xl text-orange-500 uppercase'>Наши<span className='text-black'> отзывы</span></h2>
@@ -48,7 +48,7 @@ export const OtzyvySection2 = () => {
 						</div>
 						<div className='pl-6 mt-2'>
 							<p className='text-left text-sm mt-4'>
-								Поломалась АКПП, эвакуатор приехал быстро, машина большая я всё переживал как будут тянуть, что-бы бампер не повредить. Видно что водитель опытный, сделал все безупречно и затянул и спустил. 
+								Поломалась АКПП, эвакуатор приехал быстро, машина большая я всё переживал как будут тянуть, что-бы бампер не повредить. Видно что водитель опытный, сделал все безупречно и затянул и спустил.
 							</p>
 						</div>
 						<div className='pl-10 mt-6'>
